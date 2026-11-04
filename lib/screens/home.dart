@@ -6,6 +6,12 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(
+        255,
+        20,
+        34,
+        46,
+      ), // background color
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
@@ -15,12 +21,12 @@ class HomePage extends StatelessWidget {
               children: [
                 // Logo / pizza image (falls back to an icon if no image yet)
                 Image.asset(
-                  'assets/images/logo.png',
+                  'assets/images/pizza.png',
                   height: 180,
                   errorBuilder: (context, error, stackTrace) => const Icon(
                     Icons.local_pizza,
                     size: 140,
-                    color: Colors.deepOrange,
+                    color: Color.fromARGB(255, 255, 0, 0),
                   ),
                 ),
                 const SizedBox(height: 16),
@@ -29,13 +35,16 @@ class HomePage extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 36,
                     fontWeight: FontWeight.bold,
-                    color: Colors.deepOrange,
+                    color: Color.fromARGB(255, 180, 20, 20),
                   ),
                 ),
                 const SizedBox(height: 8),
                 const Text(
                   'Fresh, hot and delivered fast!',
-                  style: TextStyle(fontSize: 16),
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Color.fromARGB(255, 251, 0, 0),
+                  ),
                 ),
                 const SizedBox(height: 32),
 
@@ -58,7 +67,7 @@ class HomePage extends StatelessWidget {
                   children: [
                     IconButton(
                       iconSize: 40,
-                      color: Colors.blue,
+                      color: const Color.fromARGB(255, 0, 89, 255),
                       tooltip: 'Twitter / X',
                       icon: const Icon(Icons.public),
                       onPressed: () => Navigator.pushNamed(context, '/twitter'),
@@ -66,7 +75,7 @@ class HomePage extends StatelessWidget {
                     const SizedBox(width: 24),
                     IconButton(
                       iconSize: 40,
-                      color: Colors.indigo,
+                      color: const Color.fromARGB(255, 3, 37, 230),
                       tooltip: 'Facebook',
                       icon: const Icon(Icons.facebook),
                       onPressed: () =>
