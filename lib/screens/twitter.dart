@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
@@ -24,9 +23,7 @@ class _TwitterPageState extends State<TwitterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Twitter / X'),
-      ),
+      appBar: AppBar(title: const Text('Twitter / X')),
       body: WebViewWidget(controller: controller),
     );
   }

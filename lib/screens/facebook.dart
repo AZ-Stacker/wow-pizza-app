@@ -23,9 +23,7 @@ class _FacebookPageState extends State<FacebookPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Facebook'),
-      ),
+      appBar: AppBar(title: const Text('Facebook')),
       body: WebViewWidget(controller: controller),
     );
   }
